@@ -33,7 +33,7 @@ while True:
     frame = draw_polygon(frame, points)
 
     if detect:
-        frame = model.detect(frame, points)
+        frame = model.detect(frame = frame, points = points)
 
     key = cv.waitKey(1)
     if key == ord('q'):
