@@ -87,12 +87,13 @@ class YoloDetect():
                     center_x = int(detection[0] * self.frame_width)
                     center_y = int(detection[1] * self.frame_height)
                     w = int(detection[2] * self.frame_width)
-                    h = int(detection[3] * self.frame_height)
+                    h = int(detection[3] * self.frame_height) 
                     x = center_x - w / 2
                     y = center_y - h / 2
                     class_ids.append(class_id)
                     confidences.append(float(confidence))
                     boxes.append([x, y, w, h])
+                
 
         indices = cv2.dnn.NMSBoxes(boxes, confidences, self.conf_threshold, self.nms_threshold)
 
