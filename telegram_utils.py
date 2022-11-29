@@ -1,6 +1,6 @@
 import telegram
 
-def send_telegram(photo_path="D:\MiAI_Intrusion_Warning\alert.png"):
+def send_telegram(photo_path="alert.png"):
     try:
         my_token = "5826652814:AAFnpHm_tsy8wvYh6PbBbTqy5vgO3chFk8s"
         bot = telegram.Bot(token=my_token)
